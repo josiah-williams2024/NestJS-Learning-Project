@@ -7,6 +7,7 @@ import { AppResolver } from './app.resolver';
 import { join } from 'path';
 import { CatsModule } from './cats/cats.module';
 import { SportsModule } from './sports/sports.module';
+import { HobbiesModule } from './hobbies/hobbies.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { SportsModule } from './sports/sports.module';
     }),
     CatsModule,
     SportsModule,
+    HobbiesModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppResolver],

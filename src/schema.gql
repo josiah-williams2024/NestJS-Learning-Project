@@ -15,8 +15,14 @@ type Sport {
   experience: String!
 }
 
+type Hobby {
+  id: ID!
+  name: String!
+}
+
 type Query {
   hello: String!
   cats: [Cat!]!
   sports: [Sport!]!
+  hobbies: [Hobby!]!
 }
