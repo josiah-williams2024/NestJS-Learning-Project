@@ -2,7 +2,21 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Cat {
+  id: ID!
+  name: String!
+  age: Float!
+  breed: String!
+}
+
+type Sport {
+  id: ID!
+  name: String!
+  experience: String!
+}
+
 type Query {
   hello: String!
-  cats: [String!]!
+  cats: [Cat!]!
+  sports: [Sport!]!
 }

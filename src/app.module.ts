@@ -3,10 +3,10 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import CatsController from './cats/cats.controller';
 import { AppResolver } from './app.resolver';
 import { join } from 'path';
-import { CatsResolver } from './cats/cats.resolver';
+import { CatsModule } from './cats/cats.module';
+import { SportsModule } from './sports/sports.module';
 
 @Module({
   imports: [
@@ -14,9 +14,11 @@ import { CatsResolver } from './cats/cats.resolver';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
+    CatsModule,
+    SportsModule,
   ],
-  controllers: [AppController, CatsController],
-  providers: [AppService, AppResolver, CatsResolver],
+  controllers: [AppController],
+  providers: [AppService, AppResolver],
 })
 class AppModule {}
 
