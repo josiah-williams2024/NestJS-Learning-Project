@@ -3,7 +3,7 @@ import { Hobby } from './hobbies.model';
 
 @Injectable()
 export class HobbiesService {
-  findAll(): Hobby[]{
+  findAll(): Hobby[] {
     return [
       {
         id: 1,
